@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+							<!-- Nav -->
+                            <html lang="en">
+                                <head>
+                                    <meta charset="UTF-8">
+                                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                    <title>Hover to Play Videos</title>
+                                    <style>
+                                        #video-grid {
+                                            display: grid;
+                                            grid-template-columns: repeat(3, 1fr);
+                                            gap: 10px; /* Adjust the gap between videos */
+                                        }
+                                
+                                        .video-container {
+                                            position: relative;
+                                            width: 100%;
+                                            overflow: hidden;
+                                        }
+                                
+                                        .video {
+                                            width: 100%;
+                                            height: 100%;
+                                        }
+                                    </style>
+                                </head>
+                                <body>
+                                
+                                <div id="video-grid">
+                                    <!-- Replace 'your-video1.mp4', 'your-video2.mp4', etc. with the actual file paths or URLs of your videos -->
+                                    <div class="video-container">
+                                        <video class="video" autoplay loop muted>
+                                            <source src="video/glacier.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                                    <!-- Repeat the above block for each video in the grid -->
+                                
+                                    <!-- Example for video 2 -->
+                                    <div class="video-container">
+                                        <video class="video" autoplay loop muted>
+                                            <source src="video/chair.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                                
+                                    <!-- Example for video 2 -->
+                                    <div class="video-container">
+                                        <video class="video" autoplay loop muted>
+                                            <source src="video/europefly.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+
+                                    <!-- Example for video 2 -->
+                                    <div class="video-container">
+                                        <video class="video" autoplay loop muted>
+                                            <source src="video/pianoplaying.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+
+                                    <!-- Example for video 2 -->
+                                    <div class="video-container">
+                                        <video class="video" autoplay loop muted>
+                                            <source src="video/guitarvid.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+
+                                    <!-- Example for video 2 -->
+                                    <div class="video-container">
+                                        <video class="video" autoplay loop muted>
+                                            <source src="video/rideaway.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+
+                                    <!-- Example for video 2 -->
+                                    <div class="video-container">
+                                        <video class="video" autoplay loop muted>
+                                            <source src="video/lay.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+
+                                    <!-- Example for video 2 -->
+                                    <div class="video-container">
+                                        <video class="video" autoplay loop muted>
+                                            <source src="video/clothes.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+
+                                    <!-- Example for video 2 -->
+                                    <div class="video-container">
+                                        <video class="video" autoplay loop muted>
+                                            <source src="video/fingers.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+
+
+                                    <!-- Repeat the above block for videos 3 to 9 -->
+                                </div>
+                                
+                                <script>
+                                    // Add event listeners for each video container
+                                    const videoContainers = document.querySelectorAll('.video-container');
+                                    videoContainers.forEach((container) => {
+                                        const video = container.querySelector('.video');
+                                
+                                        container.addEventListener('mouseenter', () => {
+                                            video.play();
+                                        });
+                                
+                                        container.addEventListener('mouseleave', () => {
+                                            video.pause();
+                                            video.currentTime = 0; // Reset video to the beginning
+                                        });
+                                    });
+                                </script>
+                                </body>
+                                </html>
